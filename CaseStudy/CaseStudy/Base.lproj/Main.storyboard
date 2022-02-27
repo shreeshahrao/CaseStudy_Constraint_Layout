@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R0G-Y2-z3Q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gd1-qL-Ial">
+            <objects>
+                <viewController id="R0G-Y2-z3Q" customClass="ViewController" customModule="CaseStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CzW-Ha-BGc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2tP-1f-XEH">
+                                <rect key="frame" x="-20" y="44" width="454" height="272.5"/>
+                            </mapView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-cc-rGC">
+                                <rect key="frame" x="-20" y="589.5" width="454" height="272.5"/>
+                                <connections>
+                                    <segue destination="NZn-Tx-dFN" kind="embed" id="cOq-hZ-fh2"/>
+                                </connections>
+                            </containerView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llv-uy-MTe">
+                                <rect key="frame" x="-20" y="316.5" width="454" height="273"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g6A-26-4X4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="width" secondItem="2tP-1f-XEH" secondAttribute="width" id="0IK-XF-ch9"/>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="top" secondItem="2tP-1f-XEH" secondAttribute="bottom" priority="999" id="0M1-5l-nTx"/>
+                            <constraint firstItem="2tP-1f-XEH" firstAttribute="leading" secondItem="g6A-26-4X4" secondAttribute="leading" constant="-20" id="F8h-44-zxI"/>
+                            <constraint firstItem="g6A-26-4X4" firstAttribute="trailing" secondItem="w8I-cc-rGC" secondAttribute="trailing" constant="-20" id="HmR-it-avb"/>
+                            <constraint firstAttribute="trailing" secondItem="w8I-cc-rGC" secondAttribute="trailing" priority="999" constant="-20" id="Ih2-rh-TTJ"/>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="leading" secondItem="g6A-26-4X4" secondAttribute="leading" constant="-20" id="KCy-cl-iJF"/>
+                            <constraint firstAttribute="trailing" secondItem="2tP-1f-XEH" secondAttribute="trailing" constant="-20" id="OCb-e1-Sgo"/>
+                            <constraint firstItem="llv-uy-MTe" firstAttribute="height" secondItem="2tP-1f-XEH" secondAttribute="height" id="P3Q-Eo-Dbv"/>
+                            <constraint firstItem="llv-uy-MTe" firstAttribute="top" secondItem="2tP-1f-XEH" secondAttribute="bottom" id="Qzk-2g-13P">
+                                <variation key="heightClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="top" secondItem="llv-uy-MTe" secondAttribute="bottom" id="Qzu-iB-jgG"/>
+                            <constraint firstItem="g6A-26-4X4" firstAttribute="bottom" secondItem="llv-uy-MTe" secondAttribute="bottom" priority="999" id="R91-tb-jN1"/>
+                            <constraint firstItem="2tP-1f-XEH" firstAttribute="top" secondItem="g6A-26-4X4" secondAttribute="top" id="RWM-h5-e5E"/>
+                            <constraint firstItem="g6A-26-4X4" firstAttribute="trailing" secondItem="2tP-1f-XEH" secondAttribute="trailing" constant="-20" id="SJL-r1-0RI"/>
+                            <constraint firstItem="llv-uy-MTe" firstAttribute="leading" secondItem="g6A-26-4X4" secondAttribute="leading" constant="-20" id="UfC-GT-hbR"/>
+                            <constraint firstItem="g6A-26-4X4" firstAttribute="trailing" secondItem="llv-uy-MTe" secondAttribute="trailing" constant="-20" id="XeE-QR-znC"/>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="height" secondItem="2tP-1f-XEH" secondAttribute="height" id="a9f-6e-Zkd"/>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="bottom" secondItem="g6A-26-4X4" secondAttribute="bottom" id="dOW-hi-8wy"/>
+                            <constraint firstItem="llv-uy-MTe" firstAttribute="width" secondItem="2tP-1f-XEH" secondAttribute="width" id="hmp-Li-HDe"/>
+                            <constraint firstItem="llv-uy-MTe" firstAttribute="top" secondItem="g6A-26-4X4" secondAttribute="top" priority="999" id="oP0-gQ-dkt"/>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="width" secondItem="2tP-1f-XEH" secondAttribute="width" id="qT6-pz-tOh"/>
+                            <constraint firstItem="2tP-1f-XEH" firstAttribute="leading" secondItem="llv-uy-MTe" secondAttribute="trailing" priority="999" id="qmw-kR-KmM"/>
+                            <constraint firstItem="w8I-cc-rGC" firstAttribute="height" secondItem="2tP-1f-XEH" secondAttribute="height" id="sKQ-hM-04J"/>
+                            <constraint firstItem="2tP-1f-XEH" firstAttribute="top" secondItem="g6A-26-4X4" secondAttribute="top" id="uBX-HU-sZ4"/>
+                            <constraint firstItem="g6A-26-4X4" firstAttribute="bottom" secondItem="w8I-cc-rGC" secondAttribute="bottom" id="wN3-G7-zRY"/>
+                            <constraint firstItem="llv-uy-MTe" firstAttribute="leading" secondItem="CzW-Ha-BGc" secondAttribute="leading" constant="-20" id="xtZ-JK-BSJ"/>
+                        </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="P3Q-Eo-Dbv"/>
+                                <exclude reference="Qzk-2g-13P"/>
+                                <exclude reference="UfC-GT-hbR"/>
+                                <exclude reference="HmR-it-avb"/>
+                                <exclude reference="SJL-r1-0RI"/>
+                                <exclude reference="XeE-QR-znC"/>
+                                <exclude reference="wN3-G7-zRY"/>
+                                <exclude reference="F8h-44-zxI"/>
+                                <exclude reference="RWM-h5-e5E"/>
+                                <exclude reference="KCy-cl-iJF"/>
+                                <exclude reference="Qzu-iB-jgG"/>
+                                <exclude reference="sKQ-hM-04J"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="2tP-1f-XEH" id="x1c-4N-KCD"/>
+                        <outlet property="webView" destination="llv-uy-MTe" id="jX2-zI-REU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UM9-eL-9So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027.2321428571429" y="1055.072463768116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p81-kH-9v4">
+            <objects>
+                <viewController id="NZn-Tx-dFN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wt8-2z-lgI">
+                        <rect key="frame" x="0.0" y="0.0" width="454" height="272.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Cnf-lJ-Wie" userLabel="Text View1">
+                                <rect key="frame" x="20" y="44" width="207" height="194.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Rome's history spans 28 centuries. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it a major human settlement for almost three millennia and one of the oldest continuously occupied cities in Europe.The city's early population originated from a mix of Latins, Etruscans, and Sabines. Eventually, the city successively became the capital of the Roman Kingdom, the Roman Republic and the Roman Empire, and is regarded by many as the first-ever Imperial city and metropolis.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cL9-pV-IQC" userLabel="Text View2">
+                                <rect key="frame" x="227" y="44" width="207" height="194.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Rome is in the Lazio region of central Italy on the Tiber (Italian: Tevere) river. The original settlement developed on hills that faced onto a ford beside the Tiber Island, the only natural ford of the river in this area. The Rome of the Kings was built on seven hills: the Aventine Hill, the Caelian Hill, the Capitoline Hill, the Esquiline Hill, the Palatine Hill, the Quirinal Hill, and the Viminal Hill. Modern </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e2m-lZ-u3b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="top" secondItem="Wt8-2z-lgI" secondAttribute="topMargin" id="5nU-4s-JGq"/>
+                            <constraint firstItem="e2m-lZ-u3b" firstAttribute="trailing" secondItem="cL9-pV-IQC" secondAttribute="trailing" priority="999" id="7i2-vD-z65"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cL9-pV-IQC" secondAttribute="trailing" id="D5c-ph-Qwf"/>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="leading" secondItem="Cnf-lJ-Wie" secondAttribute="trailing" id="IMD-mF-Ul7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Cnf-lJ-Wie" secondAttribute="bottom" id="MIW-IO-N1y"/>
+                            <constraint firstItem="e2m-lZ-u3b" firstAttribute="trailing" secondItem="Cnf-lJ-Wie" secondAttribute="trailing" priority="999" id="Nmb-Y1-tp0"/>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="height" secondItem="Cnf-lJ-Wie" secondAttribute="height" priority="999" id="Nx5-q8-dL0"/>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="leading" secondItem="Cnf-lJ-Wie" secondAttribute="trailing" id="aXT-xz-r5c"/>
+                            <constraint firstItem="e2m-lZ-u3b" firstAttribute="bottom" secondItem="cL9-pV-IQC" secondAttribute="bottom" priority="999" id="d4K-YD-gd8"/>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="leading" secondItem="e2m-lZ-u3b" secondAttribute="leading" priority="999" id="fEc-F8-e6d"/>
+                            <constraint firstItem="Cnf-lJ-Wie" firstAttribute="leading" secondItem="Wt8-2z-lgI" secondAttribute="leadingMargin" id="ip5-s4-1qf"/>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="width" secondItem="Cnf-lJ-Wie" secondAttribute="width" id="jcU-xF-6Hu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cL9-pV-IQC" secondAttribute="bottom" id="k34-0j-sKt"/>
+                            <constraint firstItem="Cnf-lJ-Wie" firstAttribute="leading" secondItem="e2m-lZ-u3b" secondAttribute="leading" priority="999" id="nWb-Hw-9Zr"/>
+                            <constraint firstItem="cL9-pV-IQC" firstAttribute="top" secondItem="Cnf-lJ-Wie" secondAttribute="bottom" priority="999" id="twI-wA-4gM"/>
+                            <constraint firstItem="Cnf-lJ-Wie" firstAttribute="top" secondItem="Wt8-2z-lgI" secondAttribute="topMargin" id="xiy-bi-BI7"/>
+                            <constraint firstItem="Cnf-lJ-Wie" firstAttribute="top" secondItem="e2m-lZ-u3b" secondAttribute="top" priority="999" id="y8a-27-tY6"/>
+                        </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="MIW-IO-N1y"/>
+                                <exclude reference="ip5-s4-1qf"/>
+                                <exclude reference="xiy-bi-BI7"/>
+                                <exclude reference="5nU-4s-JGq"/>
+                                <exclude reference="D5c-ph-Qwf"/>
+                                <exclude reference="IMD-mF-Ul7"/>
+                                <exclude reference="aXT-xz-r5c"/>
+                                <exclude reference="jcU-xF-6Hu"/>
+                                <exclude reference="k34-0j-sKt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTM-fS-Zub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623.4375" y="510.86956521739137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
